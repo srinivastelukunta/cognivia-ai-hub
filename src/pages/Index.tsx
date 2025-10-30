@@ -4,6 +4,13 @@ import heroBackground from "@/assets/hero-background.jpg";
 import summitImage from "@/assets/summit-image.jpg";
 import podcastImage from "@/assets/podcast-image.jpg";
 import startupsImage from "@/assets/startups-image.jpg";
+import awardsTimelineImage from "@/assets/awards-timeline-image.jpg";
+import iconSummit from "@/assets/icon-summit.jpg";
+import iconAwards from "@/assets/icon-awards.jpg";
+import iconPodcasts from "@/assets/icon-podcasts.jpg";
+import iconStartups from "@/assets/icon-startups.jpg";
+import iconPress from "@/assets/icon-press.jpg";
+import iconNewsletter from "@/assets/icon-newsletter.jpg";
 const Index = () => {
   return <div className="bg-[hsl(205,67%,16%)] text-foreground min-h-screen">
       {/* Header */}
@@ -80,38 +87,49 @@ const Index = () => {
           name: 'Summit',
           desc: 'Two days, six tracks, 120+ leaders shaping agentic AI.',
           link: '/summit',
-          cta: 'View Summit'
+          cta: 'View Summit',
+          image: iconSummit
         }, {
           name: 'Awards',
           desc: 'Recognizing excellence and responsibility in AI.',
           link: '/awards',
-          cta: 'Nominate Now'
+          cta: 'Nominate Now',
+          image: iconAwards
         }, {
           name: 'Podcasts',
           desc: 'Weekly conversations with AI pioneers and practitioners.',
           link: '/podcasts',
-          cta: 'Listen Now'
+          cta: 'Listen Now',
+          image: iconPodcasts
         }, {
           name: 'Startups',
           desc: '30 AI startups reimagining enterprise and impact.',
           link: '/startups',
-          cta: 'Apply Now'
+          cta: 'Apply Now',
+          image: iconStartups
         }, {
           name: 'Press',
           desc: 'News, assets, and accreditation for global media.',
           link: '/press',
-          cta: 'Access Press Kit'
+          cta: 'Access Press Kit',
+          image: iconPress
         }, {
           name: 'Newsletter',
           desc: 'Monthly digest of frameworks, talks, and AI tools.',
           link: '#newsletter',
-          cta: 'Join Newsletter'
-        }].map(item => <div key={item.name} className="border border-white/20 rounded-xl p-6 md:p-8 hover:border-primary transition-all duration-300 hover:shadow-[0_0_30px_hsl(187,100%,50%,0.2)]">
-              <h4 className="text-lg md:text-xl font-semibold mb-2">{item.name}</h4>
-              <p className="text-sm opacity-80 mb-4">{item.desc}</p>
-              <a href={item.link} className="text-primary font-semibold hover:underline inline-flex items-center gap-1">
-                {item.cta} <span>→</span>
-              </a>
+          cta: 'Join Newsletter',
+          image: iconNewsletter
+        }].map(item => <div key={item.name} className="border border-white/20 rounded-xl overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-[0_0_30px_hsl(187,100%,50%,0.2)]">
+              <div className="h-32 overflow-hidden">
+                <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+              </div>
+              <div className="p-6 md:p-8">
+                <h4 className="text-lg md:text-xl font-semibold mb-2">{item.name}</h4>
+                <p className="text-sm opacity-80 mb-4">{item.desc}</p>
+                <a href={item.link} className="text-primary font-semibold hover:underline inline-flex items-center gap-1">
+                  {item.cta} <span>→</span>
+                </a>
+              </div>
             </div>)}
         </div>
       </section>
@@ -150,7 +168,10 @@ const Index = () => {
               Learn More <span>→</span>
             </a>
           </div>
-          <div className="p-6 border border-white/20 rounded-xl hover:border-primary/50 transition-all duration-300">
+          <div className="p-6 border border-white/20 rounded-xl hover:border-primary/50 transition-all duration-300 overflow-hidden">
+            <div className="mb-4 -mx-6 -mt-6">
+              <img src={awardsTimelineImage} alt="Awards" className="w-full h-32 object-cover" />
+            </div>
             <h4 className="font-semibold mb-2 text-base md:text-lg">Award Timeline</h4>
             <p className="text-xs md:text-sm opacity-80 mb-4">Nominations close Feb 20, 2026. Submit today.</p>
             <a href="/awards" className="text-primary text-sm font-semibold hover:underline inline-flex items-center gap-1">
