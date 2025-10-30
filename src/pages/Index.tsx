@@ -1,14 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-
 const Index = () => {
-  return (
-    <div className="bg-[hsl(205,67%,16%)] text-foreground min-h-screen">
+  return <div className="bg-[hsl(205,67%,16%)] text-foreground min-h-screen">
       {/* Header */}
       <header className="flex items-center justify-between px-4 md:px-8 py-6 border-b border-white/10 sticky top-0 bg-[hsl(205,67%,16%)]/90 backdrop-blur-md z-50">
         <div className="flex items-center space-x-3">
           <img src="/cognivia-logo.png" alt="Cognivia Logo" className="h-10 w-auto" />
-          <h1 className="text-xl md:text-2xl font-extrabold tracking-wide">Cognivia</h1>
+          
         </div>
         <nav className="hidden md:flex space-x-6 lg:space-x-8 text-sm font-semibold tracking-wide">
           <a href="/" className="hover:text-primary transition-colors">Home</a>
@@ -69,22 +67,43 @@ const Index = () => {
       <section className="py-16 md:py-20 bg-[hsl(205,65%,18%)] text-center px-4">
         <h3 className="text-2xl md:text-3xl font-bold mb-10">One Platform. Six Portals of Possibility.</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 max-w-6xl mx-auto">
-          {[
-            { name: 'Summit', desc: 'Two days, six tracks, 120+ leaders shaping agentic AI.', link: '/summit', cta: 'View Summit' },
-            { name: 'Awards', desc: 'Recognizing excellence and responsibility in AI.', link: '/awards', cta: 'Nominate Now' },
-            { name: 'Podcasts', desc: 'Weekly conversations with AI pioneers and practitioners.', link: '/podcasts', cta: 'Listen Now' },
-            { name: 'Startups', desc: '30 AI startups reimagining enterprise and impact.', link: '/startups', cta: 'Apply Now' },
-            { name: 'Press', desc: 'News, assets, and accreditation for global media.', link: '/press', cta: 'Access Press Kit' },
-            { name: 'Newsletter', desc: 'Monthly digest of frameworks, talks, and AI tools.', link: '#newsletter', cta: 'Join Newsletter' }
-          ].map((item) => (
-            <div key={item.name} className="border border-white/20 rounded-xl p-6 md:p-8 hover:border-primary transition-all duration-300 hover:shadow-[0_0_30px_hsl(187,100%,50%,0.2)]">
+          {[{
+          name: 'Summit',
+          desc: 'Two days, six tracks, 120+ leaders shaping agentic AI.',
+          link: '/summit',
+          cta: 'View Summit'
+        }, {
+          name: 'Awards',
+          desc: 'Recognizing excellence and responsibility in AI.',
+          link: '/awards',
+          cta: 'Nominate Now'
+        }, {
+          name: 'Podcasts',
+          desc: 'Weekly conversations with AI pioneers and practitioners.',
+          link: '/podcasts',
+          cta: 'Listen Now'
+        }, {
+          name: 'Startups',
+          desc: '30 AI startups reimagining enterprise and impact.',
+          link: '/startups',
+          cta: 'Apply Now'
+        }, {
+          name: 'Press',
+          desc: 'News, assets, and accreditation for global media.',
+          link: '/press',
+          cta: 'Access Press Kit'
+        }, {
+          name: 'Newsletter',
+          desc: 'Monthly digest of frameworks, talks, and AI tools.',
+          link: '#newsletter',
+          cta: 'Join Newsletter'
+        }].map(item => <div key={item.name} className="border border-white/20 rounded-xl p-6 md:p-8 hover:border-primary transition-all duration-300 hover:shadow-[0_0_30px_hsl(187,100%,50%,0.2)]">
               <h4 className="text-lg md:text-xl font-semibold mb-2">{item.name}</h4>
               <p className="text-sm opacity-80 mb-4">{item.desc}</p>
               <a href={item.link} className="text-primary font-semibold hover:underline inline-flex items-center gap-1">
                 {item.cta} <span>→</span>
               </a>
-            </div>
-          ))}
+            </div>)}
         </div>
       </section>
 
@@ -130,11 +149,7 @@ const Index = () => {
           Join 10,000+ CDAIOs receiving our monthly digest of case studies, frameworks, and AI leadership insights.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-0 max-w-md mx-auto">
-          <Input 
-            type="email" 
-            placeholder="Your email address" 
-            className="px-4 py-3 sm:rounded-l-md sm:rounded-r-none rounded-md text-foreground bg-white/10 border-white/20 focus:border-primary placeholder:text-white/60" 
-          />
+          <Input type="email" placeholder="Your email address" className="px-4 py-3 sm:rounded-l-md sm:rounded-r-none rounded-md text-foreground bg-white/10 border-white/20 focus:border-primary placeholder:text-white/60" />
           <Button className="bg-primary text-primary-foreground px-6 py-3 sm:rounded-r-md sm:rounded-l-none rounded-md font-semibold hover:bg-primary/90 transition-colors mt-2 sm:mt-0">
             Subscribe
           </Button>
@@ -146,7 +161,7 @@ const Index = () => {
         <div className="flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto gap-6">
           <div className="flex items-center space-x-3">
             <img src="/cognivia-logo.png" alt="Cognivia Logo" className="h-8 w-auto" />
-            <span className="font-bold text-lg">Cognivia.ai</span>
+            
           </div>
           <nav className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm">
             <a href="/" className="hover:text-primary transition-colors">Home</a>
@@ -161,8 +176,6 @@ const Index = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
