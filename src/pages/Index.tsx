@@ -26,6 +26,7 @@ const Index = () => {
           <a href="/podcasts" className="hover:text-primary transition-colors">Podcasts</a>
           <a href="/startups" className="hover:text-primary transition-colors">Startups</a>
           <a href="/press" className="hover:text-primary transition-colors">Press</a>
+          <a href="/about" className="hover:text-primary transition-colors">About</a>
         </nav>
         <div className="flex space-x-2 md:space-x-3">
           <Button className="bg-foreground text-[hsl(205,67%,16%)] font-semibold hover:bg-primary transition-colors">
@@ -209,6 +210,7 @@ const Index = () => {
             <a href="/podcasts" className="hover:text-primary transition-colors">Podcasts</a>
             <a href="/startups" className="hover:text-primary transition-colors">Startups</a>
             <a href="/press" className="hover:text-primary transition-colors">Press</a>
+            <a href="/about" className="hover:text-primary transition-colors">About</a>
           </nav>
           <p className="text-xs opacity-60 max-w-sm">
             © 2025 Cognivia.ai · <a href="/conduct" className="hover:text-primary">Code of Conduct</a> · <a href="/accessibility" className="hover:text-primary">Accessibility</a> · <a href="/privacy" className="hover:text-primary">Privacy</a> · <a href="mailto:hello@cognivia.ai" className="hover:text-primary">hello@cognivia.ai</a>
