@@ -1,5 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import heroBackground from "@/assets/hero-background.jpg";
+import summitImage from "@/assets/summit-image.jpg";
+import podcastImage from "@/assets/podcast-image.jpg";
+import startupsImage from "@/assets/startups-image.jpg";
 const Index = () => {
   return <div className="bg-[hsl(205,67%,16%)] text-foreground min-h-screen">
       {/* Header */}
@@ -27,20 +31,25 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="text-center py-16 md:py-28 px-4 bg-gradient-to-b from-[hsl(205,67%,16%)] to-[hsl(205,65%,18%)]">
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight max-w-5xl mx-auto">
-          Where human vision becomes living intelligence.
-        </h2>
+      <section className="relative text-center py-16 md:py-28 px-4 bg-gradient-to-b from-[hsl(205,67%,16%)] to-[hsl(205,65%,18%)] overflow-hidden">
+        <div className="absolute inset-0 opacity-40">
+          <img src={heroBackground} alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="relative z-10">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight max-w-5xl mx-auto">
+            Where human vision becomes living intelligence.
+          </h2>
         <p className="text-base md:text-lg max-w-3xl mx-auto mb-8 opacity-80 px-4">
           A global platform connecting Chief Digital & AI Officers to shape the intelligent enterprise—through summits, awards, podcasts, and innovation programs.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors">
-            Get Tickets
-          </Button>
-          <Button size="lg" variant="outline" className="border-foreground text-foreground hover:bg-white/10">
-            Explore the Summit
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button size="lg" className="bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors">
+              Get Tickets
+            </Button>
+            <Button size="lg" variant="outline" className="border-foreground text-foreground hover:bg-white/10">
+              Explore the Summit
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -111,21 +120,30 @@ const Index = () => {
       <section className="py-16 md:py-20 text-center bg-[hsl(205,67%,16%)] px-4">
         <h3 className="text-2xl md:text-3xl font-bold mb-10">This Month at Cognivia</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-          <div className="p-6 border border-white/20 rounded-xl hover:border-primary/50 transition-all duration-300">
+          <div className="p-6 border border-white/20 rounded-xl hover:border-primary/50 transition-all duration-300 overflow-hidden">
+            <div className="mb-4 -mx-6 -mt-6">
+              <img src={summitImage} alt="Summit" className="w-full h-32 object-cover" />
+            </div>
             <h4 className="font-semibold mb-2 text-base md:text-lg">Summit Spotlight</h4>
             <p className="text-xs md:text-sm opacity-80 mb-4">Agentic Enterprise 2026 · Dubai · March 5–6. Early-bird tickets open.</p>
             <a href="/summit" className="text-primary text-sm font-semibold hover:underline inline-flex items-center gap-1">
               View Agenda <span>→</span>
             </a>
           </div>
-          <div className="p-6 border border-white/20 rounded-xl hover:border-primary/50 transition-all duration-300">
+          <div className="p-6 border border-white/20 rounded-xl hover:border-primary/50 transition-all duration-300 overflow-hidden">
+            <div className="mb-4 -mx-6 -mt-6">
+              <img src={podcastImage} alt="Podcast" className="w-full h-32 object-cover" />
+            </div>
             <h4 className="font-semibold mb-2 text-base md:text-lg">Leader Insight</h4>
             <p className="text-xs md:text-sm opacity-80 mb-4">Governance That Ships — balancing velocity & responsibility.</p>
             <a href="/podcasts" className="text-primary text-sm font-semibold hover:underline inline-flex items-center gap-1">
               Listen Now <span>→</span>
             </a>
           </div>
-          <div className="p-6 border border-white/20 rounded-xl hover:border-primary/50 transition-all duration-300">
+          <div className="p-6 border border-white/20 rounded-xl hover:border-primary/50 transition-all duration-300 overflow-hidden">
+            <div className="mb-4 -mx-6 -mt-6">
+              <img src={startupsImage} alt="Startups" className="w-full h-32 object-cover" />
+            </div>
             <h4 className="font-semibold mb-2 text-base md:text-lg">Startup Feature</h4>
             <p className="text-xs md:text-sm opacity-80 mb-4">Predictia — reinventing demand sensing with generative agents.</p>
             <a href="/startups" className="text-primary text-sm font-semibold hover:underline inline-flex items-center gap-1">
