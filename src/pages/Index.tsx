@@ -74,7 +74,7 @@ const Index = () => {
 
       {/* Ecosystem */}
       <section className="py-16 md:py-20 bg-[hsl(205,65%,18%)] text-center px-4">
-        <h3 className="text-2xl md:text-3xl font-bold mb-10">One Platform. Six Portals of Possibility.</h3>
+        <h3 className="text-2xl md:text-3xl font-bold mb-10">Connecting the Forces Shaping Intelligent Enterprise</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 max-w-6xl mx-auto">
           {[{
           name: 'Summit',
