@@ -672,7 +672,7 @@ const JoinSponsorship = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Partnership Impact by the Numbers</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">10,000+</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">3,000+</div>
               <p className="text-white/70">CDAIOs in global network</p>
             </div>
             <div className="text-center">
