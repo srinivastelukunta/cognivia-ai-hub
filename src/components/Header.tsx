@@ -93,25 +93,25 @@ const Header = () => {
           </a>
         </Button>
         <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
-          <a href="/awards" className="flex items-center gap-1.5">
+          <a href="https://awards.cognivian.ai" className="flex items-center gap-1.5">
             <Trophy className="w-4 h-4" />
             Awards
           </a>
         </Button>
         <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
-          <a href="/podcasts" className="flex items-center gap-1.5">
+          <a href="https://podcasts.cognivian.ai" className="flex items-center gap-1.5">
             <Mic className="w-4 h-4" />
             Podcasts
           </a>
         </Button>
         <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
-          <a href="/papers" className="flex items-center gap-1.5">
+          <a href="https://papers.cognivian.ai" className="flex items-center gap-1.5">
             <FileText className="w-4 h-4" />
             Papers
           </a>
         </Button>
         <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
-          <a href="/startups" className="flex items-center gap-1.5">
+          <a href="https://startups.cognivian.ai" className="flex items-center gap-1.5">
             <Rocket className="w-4 h-4" />
             Startups
           </a>

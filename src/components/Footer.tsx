@@ -24,25 +24,25 @@ const Footer = () => {
             </a>
           </Button>
           <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
-            <a href="/awards" className="flex items-center gap-1.5">
+            <a href="https://awards.cognivian.ai" className="flex items-center gap-1.5">
               <Trophy className="w-3.5 h-3.5" />
               Awards
             </a>
           </Button>
           <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
-            <a href="/podcasts" className="flex items-center gap-1.5">
+            <a href="https://podcasts.cognivian.ai" className="flex items-center gap-1.5">
               <Mic className="w-3.5 h-3.5" />
               Podcasts
             </a>
           </Button>
           <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
-            <a href="/papers" className="flex items-center gap-1.5">
+            <a href="https://papers.cognivian.ai" className="flex items-center gap-1.5">
               <FileText className="w-3.5 h-3.5" />
               Papers
             </a>
           </Button>
           <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
-            <a href="/startups" className="flex items-center gap-1.5">
+            <a href="https://startups.cognivian.ai" className="flex items-center gap-1.5">
               <Rocket className="w-3.5 h-3.5" />
               Startups
             </a>
