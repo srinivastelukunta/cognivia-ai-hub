@@ -19,14 +19,23 @@ const Index = () => {
           <img src="/cognivia-logo.png" alt="Cognivia Logo" className="h-10 w-auto" />
           
         </div>
-        <nav className="hidden md:flex space-x-6 lg:space-x-8 text-sm font-semibold tracking-wide">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-6 text-sm font-semibold tracking-wide">
           <a href="/" className="hover:text-primary transition-colors">Home</a>
-          <a href="/summit" className="hover:text-primary transition-colors">Summit</a>
-          <a href="/awards" className="hover:text-primary transition-colors">Awards</a>
-          <a href="/podcasts" className="hover:text-primary transition-colors">Podcasts</a>
-          <a href="/startups" className="hover:text-primary transition-colors">Startups</a>
-          <a href="/press" className="hover:text-primary transition-colors">Press</a>
           <a href="/about" className="hover:text-primary transition-colors">About</a>
+          <a href="/press" className="hover:text-primary transition-colors">Press</a>
+          <span className="text-white/20">|</span>
+          <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5">
+            <a href="/summit">Summit</a>
+          </Button>
+          <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5">
+            <a href="/awards">Awards</a>
+          </Button>
+          <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5">
+            <a href="/podcasts">Podcasts</a>
+          </Button>
+          <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5">
+            <a href="/startups">Startups</a>
+          </Button>
         </nav>
         <div className="flex space-x-2 md:space-x-3">
           <Button className="bg-foreground text-[hsl(205,67%,16%)] font-semibold hover:bg-primary transition-colors">
@@ -203,14 +212,23 @@ const Index = () => {
             <img src="/cognivia-logo.png" alt="Cognivia Logo" className="h-8 w-auto" />
             
           </div>
-          <nav className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm">
+          <nav className="flex flex-wrap justify-center items-center gap-3 md:gap-4 text-sm">
             <a href="/" className="hover:text-primary transition-colors">Home</a>
-            <a href="/summit" className="hover:text-primary transition-colors">Summit</a>
-            <a href="/awards" className="hover:text-primary transition-colors">Awards</a>
-            <a href="/podcasts" className="hover:text-primary transition-colors">Podcasts</a>
-            <a href="/startups" className="hover:text-primary transition-colors">Startups</a>
-            <a href="/press" className="hover:text-primary transition-colors">Press</a>
             <a href="/about" className="hover:text-primary transition-colors">About</a>
+            <a href="/press" className="hover:text-primary transition-colors">Press</a>
+            <span className="text-white/20">|</span>
+            <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5 h-8">
+              <a href="/summit">Summit</a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5 h-8">
+              <a href="/awards">Awards</a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5 h-8">
+              <a href="/podcasts">Podcasts</a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5 h-8">
+              <a href="/startups">Startups</a>
+            </Button>
           </nav>
           <p className="text-xs opacity-60 max-w-sm">
             © 2025 Cognivia.ai · <a href="/conduct" className="hover:text-primary">Code of Conduct</a> · <a href="/accessibility" className="hover:text-primary">Accessibility</a> · <a href="/privacy" className="hover:text-primary">Privacy</a> · <a href="mailto:hello@cognivia.ai" className="hover:text-primary">hello@cognivia.ai</a>
