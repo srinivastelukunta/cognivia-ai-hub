@@ -87,7 +87,7 @@ const Header = () => {
         )}
         <span className="text-white/20">|</span>
         <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
-          <a href="/summit" className="flex items-center gap-1.5">
+          <a href="https://summit.cognivian.ai" className="flex items-center gap-1.5">
             <Target className="w-4 h-4" />
             Summit
           </a>

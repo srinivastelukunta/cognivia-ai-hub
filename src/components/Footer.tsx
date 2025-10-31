@@ -18,7 +18,7 @@ const Footer = () => {
           <Link to="/press" className="hover:text-primary transition-colors">Press</Link>
           <span className="text-white/20">|</span>
           <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
-            <a href="/summit" className="flex items-center gap-1.5">
+            <a href="https://summit.cognivian.ai" className="flex items-center gap-1.5">
               <Target className="w-3.5 h-3.5" />
               Summit
             </a>
