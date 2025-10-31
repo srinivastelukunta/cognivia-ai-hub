@@ -29,7 +29,7 @@ const Press = () => {
       description: `${label} copied to clipboard.`
     });
   };
-  const boilerplateText = `Cognivia is the global platform connecting over 10,000 Chief Digital and AI Officers across 50+ countries. Founded to accelerate responsible AI transformation in enterprise, Cognivia provides a comprehensive ecosystem including the annual AI Leadership Summit, AI Excellence Awards, thought leadership content, podcasts, research papers, and a curated startup showcase. The platform's mission is to connect visionary leaders, share proven frameworks, and drive measurable business impact through artificial intelligence. Cognivia's 2026 Dubai Summit will convene 120+ speakers and 2,000+ attendees representing the world's leading organizations in AI transformation.`;
+  const boilerplateText = `Cognivia is the global platform connecting over 3,000 Chief Digital and AI Officers across 50+ countries. Founded to accelerate responsible AI transformation in enterprise, Cognivia provides a comprehensive ecosystem including the annual AI Leadership Summit, AI Excellence Awards, thought leadership content, podcasts, research papers, and a curated startup showcase. The platform's mission is to connect visionary leaders, share proven frameworks, and drive measurable business impact through artificial intelligence. Cognivia's 2026 Dubai Summit will convene 120+ speakers and 2,000+ attendees representing the world's leading organizations in AI transformation.`;
   return <div className="min-h-screen bg-gradient-to-b from-[#0B2A42] via-[#102C4A] to-[#0B2A42]">
       <Header />
 
