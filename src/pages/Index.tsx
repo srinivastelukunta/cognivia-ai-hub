@@ -1,7 +1,12 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Loader2 } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import summitImage from "@/assets/summit-image.jpg";
 import podcastImage from "@/assets/podcast-image.jpg";
@@ -14,6 +19,44 @@ import iconStartups from "@/assets/icon-startups.jpg";
 import iconPress from "@/assets/icon-press.jpg";
 import iconNewsletter from "@/assets/icon-newsletter.jpg";
 const Index = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+  const navigate = useNavigate();
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('submit-newsletter-signup', {
+        body: { email, isMediaProfessional: false }
+      });
+
+      if (error) throw error;
+
+      if (data.success) {
+        toast({
+          title: "Check your email!",
+          description: "We've sent you a verification code. Please check your inbox.",
+        });
+        setEmail("");
+        navigate(`/verify?email=${encodeURIComponent(data.email)}`);
+      } else {
+        throw new Error(data.error || 'Subscription failed');
+      }
+    } catch (error: any) {
+      console.error("Newsletter signup error:", error);
+      toast({
+        title: "Subscription failed",
+        description: error.message || "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return <div className="bg-[hsl(205,67%,16%)] text-foreground min-h-screen">
       <Header />
 
@@ -165,12 +208,31 @@ const Index = () => {
       <section id="newsletter" className="py-16 md:py-20 text-center bg-[hsl(205,65%,18%)] px-4">
         <h3 className="text-2xl md:text-3xl font-bold mb-4">Stay ahead of the curve.</h3>
         <p className="max-w-2xl mx-auto text-base md:text-lg opacity-80 mb-8 px-4">Join 3,000+ CDAIOs receiving our monthly digest of case studies, frameworks, and AI leadership insights.</p>
-        <div className="flex flex-col sm:flex-row justify-center gap-0 max-w-md mx-auto">
-          <Input type="email" placeholder="Your email address" className="px-4 py-3 sm:rounded-l-md sm:rounded-r-none rounded-md text-foreground bg-white/10 border-white/20 focus:border-primary placeholder:text-white/60" />
-          <Button className="bg-primary text-primary-foreground px-6 py-3 sm:rounded-r-md sm:rounded-l-none rounded-md font-semibold hover:bg-primary/90 transition-colors mt-2 sm:mt-0">
-            Subscribe
+        <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row justify-center gap-2 max-w-md mx-auto">
+          <Input 
+            type="email" 
+            placeholder="Your email address" 
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            disabled={isSubmitting}
+            className="px-4 py-3 sm:rounded-l-md sm:rounded-r-none rounded-md text-foreground bg-white/10 border-white/20 focus:border-primary placeholder:text-white/60" 
+          />
+          <Button 
+            type="submit"
+            disabled={isSubmitting}
+            className="bg-primary text-primary-foreground px-6 py-3 sm:rounded-r-md sm:rounded-l-none rounded-md font-semibold hover:bg-primary/90 transition-colors"
+          >
+            {isSubmitting ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Subscribing...
+              </>
+            ) : (
+              "Subscribe"
+            )}
           </Button>
-        </div>
+        </form>
       </section>
 
       <Footer />

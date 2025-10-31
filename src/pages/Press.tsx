@@ -1,27 +1,56 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Download, FileText, Mail, Copy, Users, Globe, TrendingUp, Calendar, Briefcase, Mic, Award, Check } from "lucide-react";
-import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { FileText, Download, Mail, ExternalLink, Loader2, Copy, Users, Globe, TrendingUp, Calendar, Briefcase, Mic, Award, Check } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
 const Press = () => {
   const [email, setEmail] = useState("");
   const [isMediaProfessional, setIsMediaProfessional] = useState(false);
-  const {
-    toast
-  } = useToast();
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+  const navigate = useNavigate();
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Subscribed!",
-      description: "You'll receive media updates in your inbox."
-    });
-    setEmail("");
-    setIsMediaProfessional(false);
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('submit-newsletter-signup', {
+        body: { email, isMediaProfessional }
+      });
+
+      if (error) throw error;
+
+      if (data.success) {
+        toast({
+          title: "Check your email!",
+          description: "We've sent you a verification code. Please check your inbox.",
+        });
+        setEmail("");
+        setIsMediaProfessional(false);
+        navigate(`/verify?email=${encodeURIComponent(data.email)}`);
+      } else {
+        throw new Error(data.error || 'Subscription failed');
+      }
+    } catch (error: any) {
+      console.error("Media signup error:", error);
+      toast({
+        title: "Subscription failed",
+        description: error.message || "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
   const copyToClipboard = (text: string, label: string) => {
     navigator.clipboard.writeText(text);
     toast({
@@ -507,15 +536,40 @@ const Press = () => {
                 Subscribe to receive press releases, media alerts, and event updates directly to your inbox.
               </p>
               <form onSubmit={handleNewsletterSubmit} className="flex flex-col gap-4">
-                <Input type="email" placeholder="Enter your email" value={email} onChange={e => setEmail(e.target.value)} required className="bg-white/10 border-white/20 text-white placeholder:text-white/50" />
+                <Input 
+                  type="email" 
+                  placeholder="Enter your email" 
+                  value={email} 
+                  onChange={e => setEmail(e.target.value)} 
+                  required 
+                  disabled={isSubmitting}
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50" 
+                />
                 <div className="flex items-center gap-2 text-left">
-                  <Checkbox id="media-professional" checked={isMediaProfessional} onCheckedChange={checked => setIsMediaProfessional(checked as boolean)} className="border-white/20" />
+                  <Checkbox 
+                    id="media-professional" 
+                    checked={isMediaProfessional} 
+                    onCheckedChange={checked => setIsMediaProfessional(checked as boolean)} 
+                    disabled={isSubmitting}
+                    className="border-white/20" 
+                  />
                   <label htmlFor="media-professional" className="text-white/80 text-sm cursor-pointer">
                     I am a media professional
                   </label>
                 </div>
-                <Button type="submit" className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold text-lg py-6">
-                  Subscribe to Updates
+                <Button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold text-lg py-6"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Subscribing...
+                    </>
+                  ) : (
+                    "Subscribe to Updates"
+                  )}
                 </Button>
               </form>
             </div>
