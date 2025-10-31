@@ -381,7 +381,7 @@ const JoinSponsorship = () => {
             <div className="space-y-2">
               <Label>Areas of Interest *</Label>
               <div className="grid md:grid-cols-2 gap-3">
-                {['Agentic AI', 'AI Governance & Ethics', 'AI Strategy & ROI', 'Generative AI', 'AI Operations', 'Change Management', 'Others'].map(area => <div key={area} className="flex items-center space-x-2">
+                {['Agentic AI', 'AI Governance & Ethics', 'AI Strategy & ROI', 'Generative AI', 'AI Operations', 'Change Management'].map(area => <div key={area} className="flex items-center space-x-2">
                     <Checkbox id={area} checked={areasOfInterest.includes(area)} onCheckedChange={checked => {
                   if (checked) {
                     setAreasOfInterest([...areasOfInterest, area]);
@@ -428,9 +428,7 @@ const JoinSponsorship = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Partner with Cognivia</h2>
-            <p className="text-lg text-white/70 max-w-2xl mx-auto">
-              Connect your brand with 10,000+ AI decision-makers. Build thought leadership, generate leads, and accelerate growth.
-            </p>
+            <p className="text-lg text-white/70 max-w-2xl mx-auto">Connect your brand with 3,000+ AI decision-makers. Build thought leadership, generate leads, and accelerate growth.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
