@@ -1,4 +1,4 @@
-# Cognivia Website - Requirements Document
+# Cognivian Website - Requirements Document
 
 ## Project Overview
 
