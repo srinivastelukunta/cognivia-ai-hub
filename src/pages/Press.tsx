@@ -7,47 +7,40 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
 const Press = () => {
   const [email, setEmail] = useState("");
   const [isMediaProfessional, setIsMediaProfessional] = useState(false);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "Subscribed!",
-      description: "You'll receive media updates in your inbox.",
+      description: "You'll receive media updates in your inbox."
     });
     setEmail("");
     setIsMediaProfessional(false);
   };
-
   const copyToClipboard = (text: string, label: string) => {
     navigator.clipboard.writeText(text);
     toast({
       title: "Copied!",
-      description: `${label} copied to clipboard.`,
+      description: `${label} copied to clipboard.`
     });
   };
-
   const boilerplateText = `Cognivia is the global platform connecting over 10,000 Chief Digital and AI Officers across 50+ countries. Founded to accelerate responsible AI transformation in enterprise, Cognivia provides a comprehensive ecosystem including the annual AI Leadership Summit, AI Excellence Awards, thought leadership content, podcasts, research papers, and a curated startup showcase. The platform's mission is to connect visionary leaders, share proven frameworks, and drive measurable business impact through artificial intelligence. Cognivia's 2026 Dubai Summit will convene 120+ speakers and 2,000+ attendees representing the world's leading organizations in AI transformation.`;
-
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0B2A42] via-[#102C4A] to-[#0B2A42]">
+  return <div className="min-h-screen bg-gradient-to-b from-[#0B2A42] via-[#102C4A] to-[#0B2A42]">
       <Header />
 
       <main>
         {/* Hero Section */}
         <section className="relative py-20 md:py-32 overflow-hidden">
-          <div 
-            className="absolute inset-0 z-0"
-            style={{
-              backgroundImage: 'url(/src/assets/hero-background.jpg)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          >
+          <div className="absolute inset-0 z-0" style={{
+          backgroundImage: 'url(/src/assets/hero-background.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}>
             <div className="absolute inset-0 bg-gradient-to-b from-[#0B2A42]/90 via-[#0B2A42]/80 to-[#0B2A42]" />
           </div>
           
@@ -63,7 +56,7 @@ const Press = () => {
               {/* Stats Overlay */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-                  <div className="text-3xl font-bold text-cyan-400">10,000+</div>
+                  <div className="text-3xl font-bold text-cyan-400">3,000+</div>
                   <div className="text-white/80 mt-2">CDAIOs in Network</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
@@ -139,9 +132,7 @@ const Press = () => {
                     <CardTitle className="text-white">Global Reach</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-white/70">
-                      Access to 10,000+ CDAIOs across 50+ countries, representing the world's most influential AI decision-makers.
-                    </CardDescription>
+                    <CardDescription className="text-white/70">Access to 3,000+ CDAIOs across 50+ countries, representing the world's most influential AI decision-makers.</CardDescription>
                   </CardContent>
                 </Card>
                 <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300">
@@ -283,10 +274,7 @@ const Press = () => {
                 <p className="text-white/80 text-lg leading-relaxed mb-6">
                   {boilerplateText}
                 </p>
-                <Button
-                  onClick={() => copyToClipboard(boilerplateText, "Boilerplate")}
-                  className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold"
-                >
+                <Button onClick={() => copyToClipboard(boilerplateText, "Boilerplate")} className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold">
                   <Copy className="w-4 h-4 mr-2" />
                   Copy to Clipboard
                 </Button>
@@ -373,7 +361,7 @@ const Press = () => {
               </h2>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="text-5xl md:text-6xl font-bold text-cyan-400 mb-2">10,000+</div>
+                  <div className="text-5xl md:text-6xl font-bold text-cyan-400 mb-2">3,000+</div>
                   <p className="text-white/80 text-lg">CDAIOs in Global Network</p>
                 </div>
                 <div className="text-center">
@@ -455,8 +443,7 @@ const Press = () => {
                 Media Inquiries
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
-                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer"
-                  onClick={() => copyToClipboard("press@cognivia.ai", "Press email")}>
+                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("press@cognivia.ai", "Press email")}>
                   <CardHeader>
                     <Mail className="w-8 h-8 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
                     <CardTitle className="text-white">General Press</CardTitle>
@@ -469,8 +456,7 @@ const Press = () => {
                     <p className="text-white/60 text-sm mt-2">Response time: 24-48 hours</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer"
-                  onClick={() => copyToClipboard("speakers@cognivia.ai", "Speakers email")}>
+                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("speakers@cognivia.ai", "Speakers email")}>
                   <CardHeader>
                     <Mic className="w-8 h-8 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
                     <CardTitle className="text-white">Speaking Opportunities</CardTitle>
@@ -483,8 +469,7 @@ const Press = () => {
                     <p className="text-white/60 text-sm mt-2">Response time: 24-48 hours</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer"
-                  onClick={() => copyToClipboard("partners@cognivia.ai", "Partners email")}>
+                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("partners@cognivia.ai", "Partners email")}>
                   <CardHeader>
                     <Briefcase className="w-8 h-8 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
                     <CardTitle className="text-white">Partnership Inquiries</CardTitle>
@@ -497,8 +482,7 @@ const Press = () => {
                     <p className="text-white/60 text-sm mt-2">Response time: 24-48 hours</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer"
-                  onClick={() => copyToClipboard("events@cognivia.ai", "Events email")}>
+                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("events@cognivia.ai", "Events email")}>
                   <CardHeader>
                     <Calendar className="w-8 h-8 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
                     <CardTitle className="text-white">Event Coverage</CardTitle>
@@ -527,21 +511,9 @@ const Press = () => {
                 Subscribe to receive press releases, media alerts, and event updates directly to your inbox.
               </p>
               <form onSubmit={handleNewsletterSubmit} className="flex flex-col gap-4">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                />
+                <Input type="email" placeholder="Enter your email" value={email} onChange={e => setEmail(e.target.value)} required className="bg-white/10 border-white/20 text-white placeholder:text-white/50" />
                 <div className="flex items-center gap-2 text-left">
-                  <Checkbox
-                    id="media-professional"
-                    checked={isMediaProfessional}
-                    onCheckedChange={(checked) => setIsMediaProfessional(checked as boolean)}
-                    className="border-white/20"
-                  />
+                  <Checkbox id="media-professional" checked={isMediaProfessional} onCheckedChange={checked => setIsMediaProfessional(checked as boolean)} className="border-white/20" />
                   <label htmlFor="media-professional" className="text-white/80 text-sm cursor-pointer">
                     I am a media professional
                   </label>
@@ -594,8 +566,6 @@ const Press = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Press;
