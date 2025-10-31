@@ -99,7 +99,7 @@ const JoinSponsorship = () => {
                 <CardDescription className="text-white/60">
                   Emerging AI Leaders & Individual Contributors
                 </CardDescription>
-                <div className="text-3xl font-bold text-primary mt-4">$299<span className="text-lg font-normal text-white/60">/year</span></div>
+                <div className="text-3xl font-bold text-primary mt-4">$199<span className="text-lg font-normal text-white/60">/year</span></div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-3">
@@ -312,7 +312,7 @@ const JoinSponsorship = () => {
               <RadioGroup value={membershipType} onValueChange={setMembershipType}>
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="associate" id="associate" />
-                  <Label htmlFor="associate" className="font-normal cursor-pointer">Associate Membership - $299/year</Label>
+                  <Label htmlFor="associate" className="font-normal cursor-pointer">Associate Membership - $199/year</Label>
                 </div>
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="full" id="full" />
