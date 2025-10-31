@@ -135,6 +135,10 @@ const JoinSponsorship = () => {
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                     <span className="text-white/90">Early bird access to event tickets</span>
                   </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-white/90">Access to member directory to connect based on mutual interest and organize events, webinars, and focus group sessions</span>
+                  </div>
                 </div>
                 <Button className="w-full mt-6" onClick={() => scrollToSection('apply')}>
                   Become an Associate Member
