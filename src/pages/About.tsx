@@ -3,10 +3,8 @@ import { Target, Trophy, Mic, FileText, Rocket, BookOpen, TrendingUp, Shield, Ch
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroBackground from "@/assets/hero-background.jpg";
-
 const About = () => {
-  return (
-    <div className="bg-[hsl(205,67%,16%)] text-foreground min-h-screen">
+  return <div className="bg-[hsl(205,67%,16%)] text-foreground min-h-screen">
       <Header />
 
       {/* Hero Section */}
@@ -21,9 +19,7 @@ const About = () => {
           <p className="text-lg md:text-xl max-w-3xl mx-auto mb-4 opacity-90 px-4">
             Building the global network of Chief Digital & AI Officers since 2024
           </p>
-          <p className="text-base md:text-lg max-w-3xl mx-auto opacity-80 px-4">
-            Cognivia is the premier platform connecting 10,000+ enterprise AI leaders to navigate the transition from experimentation to production-scale intelligence.
-          </p>
+          <p className="text-base md:text-lg max-w-3xl mx-auto opacity-80 px-4">Cognivia is the premier platform connecting 3,000+ enterprise AI leaders to navigate the transition from experimentation to production-scale intelligence.</p>
         </div>
       </section>
 
@@ -190,7 +186,7 @@ const About = () => {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
             <div className="text-center p-6">
-              <div className="text-5xl md:text-6xl font-bold text-primary mb-2">10,000+</div>
+              <div className="text-5xl md:text-6xl font-bold text-primary mb-2">3,000+</div>
               <div className="text-lg opacity-80">CDAIOs in Network</div>
             </div>
             <div className="text-center p-6">
@@ -385,8 +381,6 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
