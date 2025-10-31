@@ -551,7 +551,7 @@ const JoinSponsorship = () => {
               <div className="border border-white/20 rounded-lg p-6 hover:border-primary/50 transition-all">
                 <Video className="w-10 h-10 text-primary mb-4" />
                 <h4 className="text-lg font-semibold mb-2">Webinar Series</h4>
-                <p className="text-white/70 text-sm mb-3">Host educational webinars for our 10,000+ CDAIO community</p>
+                <p className="text-white/70 text-sm mb-3">Host educational webinars for our 3,000+ CDAIO community</p>
                 <p className="text-primary font-semibold">$10,000 per webinar</p>
               </div>
               <div className="border border-white/20 rounded-lg p-6 hover:border-primary/50 transition-all">
@@ -563,7 +563,7 @@ const JoinSponsorship = () => {
               <div className="border border-white/20 rounded-lg p-6 hover:border-primary/50 transition-all">
                 <Mail className="w-10 h-10 text-primary mb-4" />
                 <h4 className="text-lg font-semibold mb-2">Newsletter Sponsorship</h4>
-                <p className="text-white/70 text-sm mb-3">Feature in The Intelligence Digest (10,000+ subscribers)</p>
+                <p className="text-white/70 text-sm mb-3">Feature in The Intelligence Digest (3,000+ subscribers)</p>
                 <p className="text-primary font-semibold">$8,000 per edition</p>
               </div>
               <div className="border border-white/20 rounded-lg p-6 hover:border-primary/50 transition-all">
@@ -868,7 +868,7 @@ const JoinSponsorship = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Become a Partner</h3>
                 <p className="text-white/70 mb-6">
-                  Connect with 10,000+ CDAIOs and position your brand as an AI innovation leader
+                  Connect with 3,000+ CDAIOs and position your brand as an AI innovation leader
                 </p>
                 <Button size="lg" onClick={() => scrollToSection('sponsorship')}>
                   Explore Sponsorship

@@ -167,7 +167,7 @@ const About = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Newsletter</h3>
               <p className="text-sm text-white/80 mb-4 leading-relaxed">
-                Monthly intelligence digest delivering curated frameworks, summit highlights, and emerging AI tools to 10,000+ subscribers.
+                Monthly intelligence digest delivering curated frameworks, summit highlights, and emerging AI tools to 3,000+ subscribers.
               </p>
               <a href="/#newsletter" className="text-primary text-sm font-semibold hover:underline inline-flex items-center gap-1">
                 Join Newsletter <span>→</span>

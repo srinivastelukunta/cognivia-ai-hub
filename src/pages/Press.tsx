@@ -315,7 +315,7 @@ const Press = () => {
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-white/70">
-                      How 10,000+ CDAIOs across 50+ countries are collaborating to solve shared AI transformation challenges.
+                      How 3,000+ CDAIOs across 50+ countries are collaborating to solve shared AI transformation challenges.
                     </CardDescription>
                   </CardContent>
                 </Card>
@@ -415,7 +415,7 @@ const Press = () => {
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-white/70">
-                      Partner on data-driven research leveraging insights from our 10,000+ CDAIO community.
+                      Partner on data-driven research leveraging insights from our 3,000+ CDAIO community.
                     </CardDescription>
                   </CardContent>
                 </Card>
