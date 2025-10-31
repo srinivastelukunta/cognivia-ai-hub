@@ -136,12 +136,21 @@
 - Headline: "Stay ahead of the curve."
 - Description of newsletter value
 - Email signup form (input + button)
+- Email verification flow with verification codes
 
 **Design:**
 - Centered layout
 - Email input + submit button (inline)
 - Primary cyan button
 - Background: #102C4A
+
+**Functionality:**
+- Email validation (client-side with zod)
+- Media professional checkbox option
+- Verification code sent via email (Resend API)
+- Dedicated verification page at `/verify`
+- Real-time updates using Supabase realtime
+- Toast notifications for success/error states
 
 ---
 
@@ -291,18 +300,218 @@
 
 ---
 
+## Backend Architecture (Lovable Cloud)
+
+### Database Tables
+
+**1. newsletter_subscribers**
+- `id` (uuid, primary key)
+- `email` (text, unique, required)
+- `is_verified` (boolean, default: false)
+- `is_media_professional` (boolean, default: false)
+- `subscribed_at` (timestamp with time zone)
+- `verified_at` (timestamp with time zone, nullable)
+- `created_at` (timestamp with time zone)
+
+**RLS Policies:**
+- Anonymous users can insert (signup)
+- Only admins can view all subscribers
+- Service role can update verification status
+- Admins can delete subscribers
+
+**2. verification_codes**
+- `id` (uuid, primary key)
+- `email` (text, required)
+- `code` (text, required)
+- `subscriber_type` (text: 'general' or 'media_professional')
+- `is_used` (boolean, default: false)
+- `expires_at` (timestamp with time zone)
+- `created_at` (timestamp with time zone)
+
+**RLS Policies:**
+- Anonymous users can insert and update (for verification)
+- Service role can read (for edge functions)
+- Secure verification process
+
+**3. user_roles**
+- `id` (uuid, primary key)
+- `user_id` (uuid, references auth.users)
+- `role` (enum: 'admin', 'moderator', 'user')
+- `created_at` (timestamp with time zone)
+- Unique constraint on (user_id, role)
+
+**RLS Policies:**
+- Only admins can view and manage roles
+- Uses `has_role()` security definer function
+
+### Database Functions
+
+**has_role(user_id uuid, role app_role)**
+- Security definer function to check user roles
+- Prevents recursive RLS issues
+- Used in all admin-level RLS policies
+
+### Edge Functions
+
+**1. submit-newsletter-signup**
+- Handles newsletter signup submissions
+- Generates 6-digit verification code
+- Sends verification email via Resend API
+- Creates verification_codes record
+- Creates newsletter_subscribers record (unverified)
+
+**2. verify-newsletter-email**
+- Validates verification codes
+- Checks code expiration (10 minutes)
+- Marks subscriber as verified
+- Updates verification_codes as used
+- Returns success/error status
+
+### Authentication System
+
+**Features:**
+- Email/password authentication via Supabase Auth
+- Role-based access control (admin, moderator, user)
+- Auto-confirm email signups enabled (for development)
+- Protected routes with role verification
+- Real-time auth state management
+- Secure session persistence
+
+**Pages:**
+- `/auth` - Combined login/signup page
+- Protected admin routes with ProtectedRoute wrapper
+
+---
+
+## Admin Dashboard
+
+### Access & Security
+- Route: `/admin`
+- Protected by authentication + admin role verification
+- Uses ProtectedRoute wrapper component
+- Real-time session monitoring
+- Automatic redirects for unauthorized access
+
+### Dashboard Features
+
+**Statistics Overview:**
+- Total subscribers count
+- Verified subscribers count
+- Unverified subscribers count
+- New subscribers this week
+
+**Subscriber Management:**
+- Searchable and sortable data table
+- Columns: Email, Verification Status, Media Professional, Subscription Date
+- Delete functionality with confirmation dialog
+- Real-time updates via Supabase realtime
+- Pagination and filtering
+- Empty states and loading indicators
+
+**Admin Controls:**
+- Sign out functionality
+- User email display
+- Admin navigation in header (conditional)
+
+### Admin Components
+- `ProtectedRoute.tsx` - Auth guard wrapper
+- `StatsCard.tsx` - Dashboard statistics display
+- `SubscribersTable.tsx` - Data table with actions
+- `DeleteConfirmDialog.tsx` - Confirmation modal
+
+---
+
+## Security Implementation
+
+### Authentication Security
+- **Input Validation:** Zod schemas for email/password
+- **Password Requirements:** Minimum 6 characters, max 72
+- **Email Validation:** RFC-compliant email validation
+- **Error Handling:** User-friendly error messages without exposing system details
+- **No Console Logging:** Sensitive auth details never logged in production
+
+### Database Security
+- **Row Level Security (RLS):** Enabled on all tables
+- **Role-Based Access:** Admin privileges required for sensitive operations
+- **Security Definer Functions:** Prevent recursive RLS issues
+- **Foreign Key Constraints:** Cascade deletes for data integrity
+- **Service Role Protection:** Service role only used in edge functions
+
+### API Security
+- **Edge Function Authentication:** Validates requests properly
+- **Rate Limiting Considerations:** Prepared for future implementation
+- **Input Sanitization:** All inputs validated before processing
+- **CORS Configuration:** Properly configured for frontend access
+
+---
+
+## Implementation Status
+
+### ✅ Completed (Phase 1)
+1. Design system setup (index.css, tailwind.config.ts)
+2. Header with logo and navigation
+3. Hero section
+4. Why Cognivia section
+5. Ecosystem cards
+6. Spotlight section
+7. Newsletter signup with email verification
+8. Footer
+9. Responsive optimization
+10. Newsletter verification page (`/verify`)
+11. Database schema with RLS policies
+12. Edge functions for email verification
+13. Authentication system (login/signup)
+14. Admin dashboard with subscriber management
+15. Protected routes with role-based access
+16. Real-time data updates
+
+### Phase 2: Additional Pages (Future)
+- Summit page
+- Awards page
+- Podcasts page
+- Startups page
+- Press page
+- About page (placeholder exists)
+
+### Phase 3: Enhancements (Future)
+- Mobile hamburger menu
+- Admin user management interface
+- Newsletter analytics and insights
+- Export subscribers to CSV
+- Bulk subscriber actions
+- Email campaign management
+- Advanced filtering and search
+- Performance optimization
+- Analytics integration
+
+---
+
+## Environment Variables
+
+**Required Secrets:**
+- `RESEND_API_KEY` - For email verification
+- `SUPABASE_URL` - Auto-configured by Lovable Cloud
+- `SUPABASE_ANON_KEY` - Auto-configured by Lovable Cloud
+- `SUPABASE_SERVICE_ROLE_KEY` - For edge functions
+- `LOVABLE_API_KEY` - For Lovable integrations
+
+---
+
 ## Future Considerations
 
-- Backend integration for newsletter signup
 - CMS integration for content management
 - Multi-language support
 - Dark/light mode toggle (currently dark only)
 - Animation enhancements
 - Video backgrounds
 - Interactive data visualizations
+- Advanced newsletter segmentation
+- A/B testing for email campaigns
+- Subscriber engagement tracking
+- Admin activity audit logs
 
 ---
 
-**Document Version:** 1.0  
-**Last Updated:** 2025-10-30  
-**Status:** Approved for Implementation
+**Document Version:** 2.0  
+**Last Updated:** 2025-10-31  
+**Status:** Admin Dashboard Complete - Ready for Phase 2
