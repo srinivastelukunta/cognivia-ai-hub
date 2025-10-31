@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Target, Trophy, Mic, Rocket } from "lucide-react";
+import { Target, Trophy, Mic, FileText, Rocket } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import summitImage from "@/assets/summit-image.jpg";
 import podcastImage from "@/assets/podcast-image.jpg";
@@ -41,6 +41,12 @@ const Index = () => {
             <a href="/podcasts" className="flex items-center gap-1.5">
               <Mic className="w-4 h-4" />
               Podcasts
+            </a>
+          </Button>
+          <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
+            <a href="/papers" className="flex items-center gap-1.5">
+              <FileText className="w-4 h-4" />
+              Papers
             </a>
           </Button>
           <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
@@ -246,6 +252,12 @@ const Index = () => {
               <a href="/podcasts" className="flex items-center gap-1.5">
                 <Mic className="w-3.5 h-3.5" />
                 Podcasts
+              </a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
+              <a href="/papers" className="flex items-center gap-1.5">
+                <FileText className="w-3.5 h-3.5" />
+                Papers
               </a>
             </Button>
             <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
