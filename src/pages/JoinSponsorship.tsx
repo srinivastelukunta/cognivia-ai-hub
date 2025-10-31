@@ -171,7 +171,7 @@ const JoinSponsorship = () => {
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-white/90"><strong>Priority Access</strong> to CDAIO Roundtables (virtual + in-person)</span>
+                    <span className="text-white/90"><strong>Priority Access</strong> to CDAIO Roundtables as a Speaker (virtual + in-person)</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -237,7 +237,7 @@ const JoinSponsorship = () => {
                 <tr className="border-b border-white/10">
                   <td className="p-4">CDAIO Roundtables</td>
                   <td className="text-center p-4 text-sm">Virtual (Quarterly)</td>
-                  <td className="text-center p-4 text-sm">Virtual + In-Person</td>
+                  <td className="text-center p-4 text-sm">Virtual + In-Person (as Speaker)</td>
                 </tr>
                 <tr className="border-b border-white/10">
                   <td className="p-4">Executive Briefings</td>
