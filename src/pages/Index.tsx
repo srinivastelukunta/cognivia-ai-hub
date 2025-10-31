@@ -164,9 +164,7 @@ const Index = () => {
       {/* Newsletter */}
       <section id="newsletter" className="py-16 md:py-20 text-center bg-[hsl(205,65%,18%)] px-4">
         <h3 className="text-2xl md:text-3xl font-bold mb-4">Stay ahead of the curve.</h3>
-        <p className="max-w-2xl mx-auto text-base md:text-lg opacity-80 mb-8 px-4">
-          Join 10,000+ CDAIOs receiving our monthly digest of case studies, frameworks, and AI leadership insights.
-        </p>
+        <p className="max-w-2xl mx-auto text-base md:text-lg opacity-80 mb-8 px-4">Join 3,000+ CDAIOs receiving our monthly digest of case studies, frameworks, and AI leadership insights.</p>
         <div className="flex flex-col sm:flex-row justify-center gap-0 max-w-md mx-auto">
           <Input type="email" placeholder="Your email address" className="px-4 py-3 sm:rounded-l-md sm:rounded-r-none rounded-md text-foreground bg-white/10 border-white/20 focus:border-primary placeholder:text-white/60" />
           <Button className="bg-primary text-primary-foreground px-6 py-3 sm:rounded-r-md sm:rounded-l-none rounded-md font-semibold hover:bg-primary/90 transition-colors mt-2 sm:mt-0">
