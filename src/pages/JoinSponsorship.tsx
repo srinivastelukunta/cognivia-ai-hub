@@ -381,7 +381,7 @@ const JoinSponsorship = () => {
             <div className="space-y-2">
               <Label>Areas of Interest *</Label>
               <div className="grid md:grid-cols-2 gap-3">
-                {['Agentic AI', 'AI Governance & Ethics', 'AI Strategy & ROI', 'Generative AI', 'AI Operations', 'Change Management'].map(area => <div key={area} className="flex items-center space-x-2">
+                {['Agentic AI', 'AI Governance & Ethics', 'AI Strategy & ROI', 'Generative AI', 'AI Operations', 'Change Management', 'Others'].map(area => <div key={area} className="flex items-center space-x-2">
                     <Checkbox id={area} checked={areasOfInterest.includes(area)} onCheckedChange={checked => {
                   if (checked) {
                     setAreasOfInterest([...areasOfInterest, area]);
