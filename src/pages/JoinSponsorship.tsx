@@ -153,7 +153,7 @@ const JoinSponsorship = () => {
                 <CardDescription className="text-white/60">
                   Chief Digital & AI Officers
                 </CardDescription>
-                <div className="text-3xl font-bold text-primary mt-4">$999<span className="text-lg font-normal text-white/60">/year</span></div>
+                <div className="text-3xl font-bold text-primary mt-4">$499<span className="text-lg font-normal text-white/60">/year</span></div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-3">
@@ -316,7 +316,7 @@ const JoinSponsorship = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="full" id="full" />
-                  <Label htmlFor="full" className="font-normal cursor-pointer">Full Membership - $999/year</Label>
+                  <Label htmlFor="full" className="font-normal cursor-pointer">Full Membership - $499/year</Label>
                 </div>
               </RadioGroup>
             </div>
