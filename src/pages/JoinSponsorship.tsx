@@ -818,7 +818,7 @@ const JoinSponsorship = () => {
             <AccordionItem value="item-3" className="border border-white/20 rounded-lg px-6">
               <AccordionTrigger>Can I upgrade from Associate to Full Membership?</AccordionTrigger>
               <AccordionContent>
-                Yes! You can upgrade at any time. We'll prorate the cost based on the remaining months in your membership year. Contact us at hello@cognivian.ai to upgrade.
+                Yes! You can upgrade at any time. We'll prorate the cost based on the remaining months in your membership year. Contact us to upgrade.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4" className="border border-white/20 rounded-lg px-6">

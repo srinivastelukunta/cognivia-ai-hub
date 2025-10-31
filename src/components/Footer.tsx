@@ -49,7 +49,7 @@ const Footer = () => {
           </Button>
         </nav>
         <p className="text-xs opacity-60 max-w-2xl">
-          © 2025 Cognivian.ai · <a href="/conduct" className="hover:text-primary">Code of Conduct</a> · <a href="/accessibility" className="hover:text-primary">Accessibility</a> · <a href="/privacy" className="hover:text-primary">Privacy</a> · <a href="mailto:hello@cognivian.ai" className="hover:text-primary">hello@cognivian.ai</a>
+          © 2025 Cognivian.ai · <a href="/conduct" className="hover:text-primary">Code of Conduct</a> · <a href="/accessibility" className="hover:text-primary">Accessibility</a> · <a href="/privacy" className="hover:text-primary">Privacy</a>
         </p>
       </div>
     </footer>

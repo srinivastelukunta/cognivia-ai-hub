@@ -443,7 +443,7 @@ const Press = () => {
                 Media Inquiries
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
-                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("press@cognivian.ai", "Press email")}>
+                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
                   <CardHeader>
                     <Mail className="w-8 h-8 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
                     <CardTitle className="text-white">General Press</CardTitle>
@@ -452,11 +452,10 @@ const Press = () => {
                     <CardDescription className="text-white/70 mb-2">
                       For general media inquiries and press releases
                     </CardDescription>
-                    <p className="text-cyan-400 font-mono">press@cognivian.ai</p>
                     <p className="text-white/60 text-sm mt-2">Response time: 24-48 hours</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("speakers@cognivian.ai", "Speakers email")}>
+                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
                   <CardHeader>
                     <Mic className="w-8 h-8 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
                     <CardTitle className="text-white">Speaking Opportunities</CardTitle>
@@ -465,11 +464,10 @@ const Press = () => {
                     <CardDescription className="text-white/70 mb-2">
                       For interview requests and speaker coordination
                     </CardDescription>
-                    <p className="text-cyan-400 font-mono">speakers@cognivian.ai</p>
                     <p className="text-white/60 text-sm mt-2">Response time: 24-48 hours</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("partners@cognivian.ai", "Partners email")}>
+                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
                   <CardHeader>
                     <Briefcase className="w-8 h-8 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
                     <CardTitle className="text-white">Partnership Inquiries</CardTitle>
@@ -478,11 +476,10 @@ const Press = () => {
                     <CardDescription className="text-white/70 mb-2">
                       For content partnerships and collaboration opportunities
                     </CardDescription>
-                    <p className="text-cyan-400 font-mono">partners@cognivian.ai</p>
                     <p className="text-white/60 text-sm mt-2">Response time: 24-48 hours</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("events@cognivian.ai", "Events email")}>
+                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
                   <CardHeader>
                     <Calendar className="w-8 h-8 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
                     <CardTitle className="text-white">Event Coverage</CardTitle>
@@ -491,7 +488,6 @@ const Press = () => {
                     <CardDescription className="text-white/70 mb-2">
                       For summit accreditation and event access
                     </CardDescription>
-                    <p className="text-cyan-400 font-mono">events@cognivian.ai</p>
                     <p className="text-white/60 text-sm mt-2">Response time: 24-48 hours</p>
                   </CardContent>
                 </Card>
