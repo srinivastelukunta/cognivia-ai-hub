@@ -13,37 +13,36 @@ import Footer from "@/components/Footer";
 import heroBackground from "@/assets/hero-background.jpg";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-
 const JoinSponsorship = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [membershipType, setMembershipType] = useState("full");
   const [areasOfInterest, setAreasOfInterest] = useState<string[]>([]);
-
   const handleMembershipSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "Application Submitted",
-      description: "We'll review your application within 48 hours and contact you via email.",
+      description: "We'll review your application within 48 hours and contact you via email."
     });
   };
-
   const handlePartnershipSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "Partnership Inquiry Received",
-      description: "Our team will contact you within 2 business days to discuss opportunities.",
+      description: "Our team will contact you within 2 business days to discuss opportunities."
     });
   };
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
@@ -56,9 +55,7 @@ const JoinSponsorship = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-white bg-clip-text text-transparent">
             Join the Global CDAIO Community
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
-            Connect with 10,000+ Chief Digital & AI Officers. Choose your membership or explore partnership opportunities.
-          </p>
+          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">Connect with 3,000+ Chief Digital & AI Officers. Choose your membership or explore partnership opportunities.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button size="lg" onClick={() => scrollToSection('membership')} className="bg-primary hover:bg-primary/90">
               View Membership Plans
@@ -70,7 +67,7 @@ const JoinSponsorship = () => {
           <div className="flex flex-wrap justify-center gap-8 text-sm md:text-base">
             <div className="flex items-center gap-2">
               <Users className="w-5 h-5 text-primary" />
-              <span className="text-white/90">10,000+ CDAIOs</span>
+              <span className="text-white/90">3,000+ CDAIOs</span>
             </div>
             <div className="flex items-center gap-2">
               <Target className="w-5 h-5 text-primary" />
@@ -372,22 +369,16 @@ const JoinSponsorship = () => {
             <div className="space-y-2">
               <Label>Areas of Interest *</Label>
               <div className="grid md:grid-cols-2 gap-3">
-                {['Agentic AI', 'AI Governance & Ethics', 'AI Strategy & ROI', 'Generative AI', 'AI Operations', 'Change Management'].map((area) => (
-                  <div key={area} className="flex items-center space-x-2">
-                    <Checkbox 
-                      id={area}
-                      checked={areasOfInterest.includes(area)}
-                      onCheckedChange={(checked) => {
-                        if (checked) {
-                          setAreasOfInterest([...areasOfInterest, area]);
-                        } else {
-                          setAreasOfInterest(areasOfInterest.filter(a => a !== area));
-                        }
-                      }}
-                    />
+                {['Agentic AI', 'AI Governance & Ethics', 'AI Strategy & ROI', 'Generative AI', 'AI Operations', 'Change Management'].map(area => <div key={area} className="flex items-center space-x-2">
+                    <Checkbox id={area} checked={areasOfInterest.includes(area)} onCheckedChange={checked => {
+                  if (checked) {
+                    setAreasOfInterest([...areasOfInterest, area]);
+                  } else {
+                    setAreasOfInterest(areasOfInterest.filter(a => a !== area));
+                  }
+                }} />
                     <Label htmlFor={area} className="font-normal cursor-pointer">{area}</Label>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
 
@@ -396,14 +387,12 @@ const JoinSponsorship = () => {
               <Textarea id="motivation" required className="min-h-[120px]" maxLength={1000} placeholder="Maximum 200 words" />
             </div>
 
-            {membershipType === 'full' && (
-              <div className="flex items-center space-x-2 p-4 border border-white/20 rounded-lg bg-white/5">
+            {membershipType === 'full' && <div className="flex items-center space-x-2 p-4 border border-white/20 rounded-lg bg-white/5">
                 <Checkbox id="confirm" required />
                 <Label htmlFor="confirm" className="font-normal cursor-pointer">
                   I confirm I hold a CDAIO or equivalent executive role
                 </Label>
-              </div>
-            )}
+              </div>}
 
             <Button type="submit" size="lg" className="w-full">
               Submit Application
@@ -881,8 +870,6 @@ const JoinSponsorship = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default JoinSponsorship;
