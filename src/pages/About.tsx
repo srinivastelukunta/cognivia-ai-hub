@@ -19,7 +19,7 @@ const About = () => {
           <p className="text-lg md:text-xl max-w-3xl mx-auto mb-4 opacity-90 px-4">
             Building the global network of Chief Digital & AI Officers since 2024
           </p>
-          <p className="text-base md:text-lg max-w-3xl mx-auto opacity-80 px-4">Cognivia is the premier platform connecting 3,000+ enterprise AI leaders to navigate the transition from experimentation to production-scale intelligence.</p>
+          <p className="text-base md:text-lg max-w-3xl mx-auto opacity-80 px-4">Cognivian is the premier platform connecting 3,000+ enterprise AI leaders to navigate the transition from experimentation to production-scale intelligence.</p>
         </div>
       </section>
 
@@ -31,7 +31,7 @@ const About = () => {
             <div className="space-y-6">
               <div className="border-l-4 border-primary pl-6 py-4">
                 <h3 className="text-xl font-semibold mb-2">2024: Foundation</h3>
-                <p className="text-white/80">Cognivia was founded to address a critical gap: enterprise AI leaders lacked a trusted network to share proven frameworks, architectures, and governance models.</p>
+                <p className="text-white/80">Cognivian was founded to address a critical gap: enterprise AI leaders lacked a trusted network to share proven frameworks, architectures, and governance models.</p>
               </div>
               <div className="border-l-4 border-primary/60 pl-6 py-4">
                 <h3 className="text-xl font-semibold mb-2">2025: Ecosystem Launch</h3>
@@ -47,7 +47,7 @@ const About = () => {
                 What started as conversations among pioneering CDAIOs has evolved into a global movement—one that prioritizes <strong className="text-primary">proof over promise</strong>, real results over hype.
               </p>
               <p className="text-lg opacity-90 leading-relaxed">
-                Today, Cognivia serves as the connective tissue between vision and execution, helping organizations move from AI experimentation to production-ready intelligence at scale.
+                Today, Cognivian serves as the connective tissue between vision and execution, helping organizations move from AI experimentation to production-ready intelligence at scale.
               </p>
             </div>
           </div>
@@ -355,7 +355,7 @@ const About = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Join the Movement</h2>
           <p className="text-lg opacity-90 mb-10 max-w-2xl mx-auto">
-            Whether you're leading AI transformation at your organization or building the next generation of enterprise AI tools, there's a place for you in the Cognivia community.
+            Whether you're leading AI transformation at your organization or building the next generation of enterprise AI tools, there's a place for you in the Cognivian community.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="border border-white/20 rounded-xl p-8 hover:border-primary/50 transition-all duration-300">

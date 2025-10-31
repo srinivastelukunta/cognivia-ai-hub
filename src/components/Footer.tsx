@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="flex flex-col items-start max-w-6xl mx-auto gap-6">
         <div className="flex items-center space-x-3">
           <Link to="/">
-            <img src="/cognivia-logo.png" alt="Cognivia Logo" className="h-8 w-auto" />
+            <img src="/cognivian-logo.png" alt="Cognivian Logo" className="h-8 w-auto" />
           </Link>
         </div>
         <nav className="flex flex-wrap items-center gap-3 md:gap-4 text-sm">
@@ -49,7 +49,7 @@ const Footer = () => {
           </Button>
         </nav>
         <p className="text-xs opacity-60 max-w-2xl">
-          © 2025 Cognivia.ai · <a href="/conduct" className="hover:text-primary">Code of Conduct</a> · <a href="/accessibility" className="hover:text-primary">Accessibility</a> · <a href="/privacy" className="hover:text-primary">Privacy</a> · <a href="mailto:hello@cognivia.ai" className="hover:text-primary">hello@cognivia.ai</a>
+          © 2025 Cognivian.ai · <a href="/conduct" className="hover:text-primary">Code of Conduct</a> · <a href="/accessibility" className="hover:text-primary">Accessibility</a> · <a href="/privacy" className="hover:text-primary">Privacy</a> · <a href="mailto:hello@cognivian.ai" className="hover:text-primary">hello@cognivian.ai</a>
         </p>
       </div>
     </footer>

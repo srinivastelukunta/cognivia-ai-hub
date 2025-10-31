@@ -109,7 +109,7 @@ const JoinSponsorship = () => {
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-white/90"><strong>25% Discount</strong> on ONE Cognivia Summit ticket</span>
+                    <span className="text-white/90"><strong>25% Discount</strong> on ONE Cognivian Summit ticket</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -167,7 +167,7 @@ const JoinSponsorship = () => {
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-white/90"><strong>25% Discount</strong> on ALL Cognivia Summits for ONE YEAR</span>
+                    <span className="text-white/90"><strong>25% Discount</strong> on ALL Cognivian Summits for ONE YEAR</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -275,7 +275,7 @@ const JoinSponsorship = () => {
       {/* Why Join Section */}
       <section className="py-16 md:py-24 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Why CDAIOs Choose Cognivia Membership</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Why CDAIOs Choose Cognivian Membership</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-6">
@@ -395,7 +395,7 @@ const JoinSponsorship = () => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="motivation">Why do you want to join Cognivia? *</Label>
+              <Label htmlFor="motivation">Why do you want to join Cognivian? *</Label>
               <Textarea id="motivation" required className="min-h-[120px]" maxLength={1000} placeholder="Maximum 200 words" />
             </div>
 
@@ -427,7 +427,7 @@ const JoinSponsorship = () => {
       <section id="sponsorship" className="py-16 md:py-24 px-4 scroll-mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Partner with Cognivia</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Partner with Cognivian</h2>
             <p className="text-lg text-white/70 max-w-2xl mx-auto">Connect your brand with 3,000+ AI decision-makers. Build thought leadership, generate leads, and accelerate growth.</p>
           </div>
 
@@ -818,13 +818,13 @@ const JoinSponsorship = () => {
             <AccordionItem value="item-3" className="border border-white/20 rounded-lg px-6">
               <AccordionTrigger>Can I upgrade from Associate to Full Membership?</AccordionTrigger>
               <AccordionContent>
-                Yes! You can upgrade at any time. We'll prorate the cost based on the remaining months in your membership year. Contact us at hello@cognivia.ai to upgrade.
+                Yes! You can upgrade at any time. We'll prorate the cost based on the remaining months in your membership year. Contact us at hello@cognivian.ai to upgrade.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4" className="border border-white/20 rounded-lg px-6">
               <AccordionTrigger>What happens to my summit discount if I don't use it?</AccordionTrigger>
               <AccordionContent>
-                For Associate Members, your 25% discount on one summit ticket is valid for any future Cognivia Summit - it never expires. For Full Members, you have unlimited 25% discounts on all summits during your one-year membership period.
+                For Associate Members, your 25% discount on one summit ticket is valid for any future Cognivian Summit - it never expires. For Full Members, you have unlimited 25% discounts on all summits during your one-year membership period.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5" className="border border-white/20 rounded-lg px-6">
@@ -834,7 +834,7 @@ const JoinSponsorship = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-6" className="border border-white/20 rounded-lg px-6">
-              <AccordionTrigger>What is the attendee profile at Cognivia events?</AccordionTrigger>
+              <AccordionTrigger>What is the attendee profile at Cognivian events?</AccordionTrigger>
               <AccordionContent>
                 85% of our attendees are C-level executives (CDOs, CAIOs, CTOs, CIOs), with the remaining 15% being VPs and Directors in AI and digital transformation roles. They represent organizations with $100M+ in annual revenue across technology, financial services, healthcare, retail, and manufacturing sectors.
               </AccordionContent>

@@ -40,7 +40,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Cognivia */}
+      {/* Why Cognivian */}
       <section className="py-16 md:py-20 text-center bg-[hsl(205,67%,16%)] px-4">
         <h3 className="text-2xl md:text-3xl font-bold mb-4">From Insight to Intelligence — Together.</h3>
         <div className="grid md:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto mt-12">
@@ -116,7 +116,7 @@ const Index = () => {
 
       {/* Spotlight */}
       <section className="py-16 md:py-20 text-center bg-[hsl(205,67%,16%)] px-4">
-        <h3 className="text-2xl md:text-3xl font-bold mb-10">This Month at Cognivia</h3>
+        <h3 className="text-2xl md:text-3xl font-bold mb-10">This Month at Cognivian</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
           <div className="p-6 border border-white/20 rounded-xl hover:border-primary/50 transition-all duration-300 overflow-hidden">
             <div className="mb-4 -mx-6 -mt-6">

@@ -29,7 +29,7 @@ const Press = () => {
       description: `${label} copied to clipboard.`
     });
   };
-  const boilerplateText = `Cognivia is the global platform connecting over 3,000 Chief Digital and AI Officers across 50+ countries. Founded to accelerate responsible AI transformation in enterprise, Cognivia provides a comprehensive ecosystem including the annual AI Leadership Summit, AI Excellence Awards, thought leadership content, podcasts, research papers, and a curated startup showcase. The platform's mission is to connect visionary leaders, share proven frameworks, and drive measurable business impact through artificial intelligence. Cognivia's 2026 Dubai Summit will convene 120+ speakers and 2,000+ attendees representing the world's leading organizations in AI transformation.`;
+  const boilerplateText = `Cognivian is the global platform connecting over 3,000 Chief Digital and AI Officers across 50+ countries. Founded to accelerate responsible AI transformation in enterprise, Cognivian provides a comprehensive ecosystem including the annual AI Leadership Summit, AI Excellence Awards, thought leadership content, podcasts, research papers, and a curated startup showcase. The platform's mission is to connect visionary leaders, share proven frameworks, and drive measurable business impact through artificial intelligence. Cognivian's 2026 Dubai Summit will convene 120+ speakers and 2,000+ attendees representing the world's leading organizations in AI transformation.`;
   return <div className="min-h-screen bg-gradient-to-b from-[#0B2A42] via-[#102C4A] to-[#0B2A42]">
       <Header />
 
@@ -50,7 +50,7 @@ const Press = () => {
                 Press & Media Center
               </h1>
               <p className="text-xl md:text-2xl text-white/80 mb-8">
-                Welcome to the Cognivia Press Room. Access media resources, latest announcements, and press materials for the global AI leadership community.
+                Welcome to the Cognivian Press Room. Access media resources, latest announcements, and press materials for the global AI leadership community.
               </p>
               
               {/* Stats Overlay */}
@@ -123,7 +123,7 @@ const Press = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                Why Cover Cognivia?
+                Why Cover Cognivian?
               </h2>
               <div className="grid md:grid-cols-3 gap-8">
                 <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300">
@@ -220,7 +220,7 @@ const Press = () => {
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-white/70 mb-6">
-                      Cognivia logos (PNG, SVG, EPS), color palette, and brand guidelines
+                      Cognivian logos (PNG, SVG, EPS), color palette, and brand guidelines
                     </CardDescription>
                     <Button variant="outline" className="w-full border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10">
                       <Download className="w-4 h-4 mr-2" />
@@ -268,7 +268,7 @@ const Press = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">
-                About Cognivia
+                About Cognivian
               </h2>
               <div className="bg-white/5 border border-white/20 rounded-lg p-8">
                 <p className="text-white/80 text-lg leading-relaxed mb-6">
@@ -357,7 +357,7 @@ const Press = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                Cognivia by the Numbers
+                Cognivian by the Numbers
               </h2>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
@@ -443,7 +443,7 @@ const Press = () => {
                 Media Inquiries
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
-                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("press@cognivia.ai", "Press email")}>
+                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("press@cognivian.ai", "Press email")}>
                   <CardHeader>
                     <Mail className="w-8 h-8 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
                     <CardTitle className="text-white">General Press</CardTitle>
@@ -452,11 +452,11 @@ const Press = () => {
                     <CardDescription className="text-white/70 mb-2">
                       For general media inquiries and press releases
                     </CardDescription>
-                    <p className="text-cyan-400 font-mono">press@cognivia.ai</p>
+                    <p className="text-cyan-400 font-mono">press@cognivian.ai</p>
                     <p className="text-white/60 text-sm mt-2">Response time: 24-48 hours</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("speakers@cognivia.ai", "Speakers email")}>
+                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("speakers@cognivian.ai", "Speakers email")}>
                   <CardHeader>
                     <Mic className="w-8 h-8 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
                     <CardTitle className="text-white">Speaking Opportunities</CardTitle>
@@ -465,11 +465,11 @@ const Press = () => {
                     <CardDescription className="text-white/70 mb-2">
                       For interview requests and speaker coordination
                     </CardDescription>
-                    <p className="text-cyan-400 font-mono">speakers@cognivia.ai</p>
+                    <p className="text-cyan-400 font-mono">speakers@cognivian.ai</p>
                     <p className="text-white/60 text-sm mt-2">Response time: 24-48 hours</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("partners@cognivia.ai", "Partners email")}>
+                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("partners@cognivian.ai", "Partners email")}>
                   <CardHeader>
                     <Briefcase className="w-8 h-8 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
                     <CardTitle className="text-white">Partnership Inquiries</CardTitle>
@@ -478,11 +478,11 @@ const Press = () => {
                     <CardDescription className="text-white/70 mb-2">
                       For content partnerships and collaboration opportunities
                     </CardDescription>
-                    <p className="text-cyan-400 font-mono">partners@cognivia.ai</p>
+                    <p className="text-cyan-400 font-mono">partners@cognivian.ai</p>
                     <p className="text-white/60 text-sm mt-2">Response time: 24-48 hours</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("events@cognivia.ai", "Events email")}>
+                <Card className="bg-white/5 border-white/20 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer" onClick={() => copyToClipboard("events@cognivian.ai", "Events email")}>
                   <CardHeader>
                     <Calendar className="w-8 h-8 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
                     <CardTitle className="text-white">Event Coverage</CardTitle>
@@ -491,7 +491,7 @@ const Press = () => {
                     <CardDescription className="text-white/70 mb-2">
                       For summit accreditation and event access
                     </CardDescription>
-                    <p className="text-cyan-400 font-mono">events@cognivia.ai</p>
+                    <p className="text-cyan-400 font-mono">events@cognivian.ai</p>
                     <p className="text-white/60 text-sm mt-2">Response time: 24-48 hours</p>
                   </CardContent>
                 </Card>
@@ -552,7 +552,7 @@ const Press = () => {
                   </CardHeader>
                   <CardContent className="text-center">
                     <CardDescription className="text-white/70 mb-6 text-lg">
-                      Experience Cognivia firsthand at the Dubai Summit 2026 with 2,000+ AI leaders.
+                      Experience Cognivian firsthand at the Dubai Summit 2026 with 2,000+ AI leaders.
                     </CardDescription>
                     <Button className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold text-lg px-8 py-6 w-full">
                       Get Tickets

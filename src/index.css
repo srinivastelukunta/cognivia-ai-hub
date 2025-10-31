@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Cognivia Design System - CXO Premium Theme */
+    /* Cognivian Design System - CXO Premium Theme */
     --background: 205 67% 16%;
     --foreground: 0 0% 100%;
 
@@ -39,11 +39,11 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Cognivia Specific Tokens */
-    --cognivia-blue: 205 67% 16%;
-    --cognivia-blue-light: 205 65% 18%;
-    --cognivia-cyan: 187 100% 50%;
-    --cognivia-cyan-light: 187 100% 65%;
+    /* Cognivian Specific Tokens */
+    --cognivian-blue: 205 67% 16%;
+    --cognivian-blue-light: 205 65% 18%;
+    --cognivian-cyan: 187 100% 50%;
+    --cognivian-cyan-light: 187 100% 65%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(180deg, hsl(205, 67%, 16%) 0%, hsl(205, 65%, 18%) 100%);
