@@ -209,6 +209,10 @@ const JoinSponsorship = () => {
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                     <span className="text-white/90">Quarterly virtual networking events</span>
                   </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-white/90">Access to member directory to connect based on mutual interest and organize events, webinars, and focus group sessions</span>
+                  </div>
                 </div>
                 <Button className="w-full mt-6 bg-primary hover:bg-primary/90" onClick={() => scrollToSection('apply')}>
                   Become a Full Member
