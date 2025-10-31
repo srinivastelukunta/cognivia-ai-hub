@@ -219,13 +219,13 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-10 px-4 md:px-8 text-center border-t border-white/10 bg-[hsl(205,67%,16%)]">
-        <div className="flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto gap-6">
+      <footer className="py-10 px-4 md:px-8 border-t border-white/10 bg-[hsl(205,67%,16%)]">
+        <div className="flex flex-col items-start max-w-6xl mx-auto gap-6">
           <div className="flex items-center space-x-3">
             <img src="/cognivia-logo.png" alt="Cognivia Logo" className="h-8 w-auto" />
             
           </div>
-          <nav className="flex flex-wrap justify-center items-center gap-3 md:gap-4 text-sm">
+          <nav className="flex flex-wrap items-center gap-3 md:gap-4 text-sm">
             <a href="/" className="hover:text-primary transition-colors">Home</a>
             <a href="/about" className="hover:text-primary transition-colors">About</a>
             <a href="/press" className="hover:text-primary transition-colors">Press</a>
@@ -255,7 +255,7 @@ const Index = () => {
               </a>
             </Button>
           </nav>
-          <p className="text-xs opacity-60 max-w-sm">
+          <p className="text-xs opacity-60 max-w-2xl">
             © 2025 Cognivia.ai · <a href="/conduct" className="hover:text-primary">Code of Conduct</a> · <a href="/accessibility" className="hover:text-primary">Accessibility</a> · <a href="/privacy" className="hover:text-primary">Privacy</a> · <a href="mailto:hello@cognivia.ai" className="hover:text-primary">hello@cognivia.ai</a>
           </p>
         </div>
