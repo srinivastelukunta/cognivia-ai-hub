@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Target, Trophy, Mic, FileText, Rocket, Network, BookOpen, TrendingUp, Shield, CheckCircle, Users, Globe, Award, Headphones } from "lucide-react";
+import { Target, Trophy, Mic, FileText, Rocket, BookOpen, TrendingUp, Shield, CheckCircle, Users, Globe, Award, Headphones } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroBackground from "@/assets/hero-background.jpg";
@@ -68,7 +68,7 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-8 md:gap-10">
             <div className="border border-white/20 rounded-xl p-8 hover:border-primary/50 transition-all duration-300">
               <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                <Network className="w-8 h-8 text-primary" />
+                <Users className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-2xl font-semibold mb-4">Connect</h3>
               <p className="text-white/80 leading-relaxed">
