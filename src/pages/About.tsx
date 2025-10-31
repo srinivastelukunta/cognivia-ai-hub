@@ -1,60 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Target, Trophy, Mic, FileText, Rocket, Network, BookOpen, TrendingUp, Shield, CheckCircle, Users, Globe, Award, Headphones } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const About = () => {
   return (
     <div className="bg-[hsl(205,67%,16%)] text-foreground min-h-screen">
-      {/* Header */}
-      <header className="flex items-center justify-between px-4 md:px-8 py-6 border-b border-white/10 sticky top-0 bg-[hsl(205,67%,16%)]/90 backdrop-blur-md z-50">
-        <div className="flex items-center space-x-3">
-          <img src="/cognivia-logo.png" alt="Cognivia Logo" className="h-10 w-auto" />
-        </div>
-        <nav className="hidden md:flex items-center gap-4 lg:gap-6 text-sm font-semibold tracking-wide">
-          <a href="/" className="hover:text-primary transition-colors">Home</a>
-          <a href="/about" className="text-primary transition-colors">About</a>
-          <a href="/press" className="hover:text-primary transition-colors">Press</a>
-          <span className="text-white/20">|</span>
-          <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
-            <a href="/summit" className="flex items-center gap-1.5">
-              <Target className="w-4 h-4" />
-              Summit
-            </a>
-          </Button>
-          <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
-            <a href="/awards" className="flex items-center gap-1.5">
-              <Trophy className="w-4 h-4" />
-              Awards
-            </a>
-          </Button>
-          <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
-            <a href="/podcasts" className="flex items-center gap-1.5">
-              <Mic className="w-4 h-4" />
-              Podcasts
-            </a>
-          </Button>
-          <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
-            <a href="/papers" className="flex items-center gap-1.5">
-              <FileText className="w-4 h-4" />
-              Papers
-            </a>
-          </Button>
-          <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
-            <a href="/startups" className="flex items-center gap-1.5">
-              <Rocket className="w-4 h-4" />
-              Startups
-            </a>
-          </Button>
-        </nav>
-        <div className="flex space-x-2 md:space-x-3">
-          <Button className="bg-foreground text-[hsl(205,67%,16%)] font-semibold hover:bg-primary transition-colors">
-            Get Tickets
-          </Button>
-          <Button variant="outline" className="hidden sm:inline-flex border-foreground text-foreground hover:bg-white/10">
-            Join Newsletter
-          </Button>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="relative text-center py-16 md:py-28 px-4 bg-gradient-to-b from-[hsl(205,67%,16%)] to-[hsl(205,65%,18%)] overflow-hidden">
@@ -431,53 +384,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-10 px-4 md:px-8 border-t border-white/10 bg-[hsl(205,67%,16%)]">
-        <div className="flex flex-col items-start max-w-6xl mx-auto gap-6">
-          <div className="flex items-center space-x-3">
-            <img src="/cognivia-logo.png" alt="Cognivia Logo" className="h-8 w-auto" />
-          </div>
-          <nav className="flex flex-wrap items-center gap-3 md:gap-4 text-sm">
-            <a href="/" className="hover:text-primary transition-colors">Home</a>
-            <a href="/about" className="hover:text-primary transition-colors">About</a>
-            <a href="/press" className="hover:text-primary transition-colors">Press</a>
-            <span className="text-white/20">|</span>
-            <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
-              <a href="/summit" className="flex items-center gap-1.5">
-                <Target className="w-3.5 h-3.5" />
-                Summit
-              </a>
-            </Button>
-            <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
-              <a href="/awards" className="flex items-center gap-1.5">
-                <Trophy className="w-3.5 h-3.5" />
-                Awards
-              </a>
-            </Button>
-            <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
-              <a href="/podcasts" className="flex items-center gap-1.5">
-                <Mic className="w-3.5 h-3.5" />
-                Podcasts
-              </a>
-            </Button>
-            <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
-              <a href="/papers" className="flex items-center gap-1.5">
-                <FileText className="w-3.5 h-3.5" />
-                Papers
-              </a>
-            </Button>
-            <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
-              <a href="/startups" className="flex items-center gap-1.5">
-                <Rocket className="w-3.5 h-3.5" />
-                Startups
-              </a>
-            </Button>
-          </nav>
-          <p className="text-xs opacity-60 max-w-2xl">
-            © 2025 Cognivia.ai · <a href="/conduct" className="hover:text-primary">Code of Conduct</a> · <a href="/accessibility" className="hover:text-primary">Accessibility</a> · <a href="/privacy" className="hover:text-primary">Privacy</a> · <a href="mailto:hello@cognivia.ai" className="hover:text-primary">hello@cognivia.ai</a>
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

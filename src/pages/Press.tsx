@@ -5,7 +5,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Download, FileText, Mail, Copy, Users, Globe, TrendingUp, Calendar, Briefcase, Mic, Award, Check } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { Link } from "react-router-dom";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Press = () => {
   const [email, setEmail] = useState("");
@@ -34,30 +35,7 @@ const Press = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0B2A42] via-[#102C4A] to-[#0B2A42]">
-      {/* Header */}
-      <header className="border-b border-white/10 bg-[#0B2A42]/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <nav className="flex items-center justify-between">
-            <Link to="/" className="flex items-center gap-2">
-              <img src="/cognivia-logo.png" alt="Cognivia" className="h-8" />
-            </Link>
-            <div className="hidden md:flex items-center gap-8">
-              <Link to="/" className="text-white/80 hover:text-white transition-colors">
-                Home
-              </Link>
-              <Link to="/about" className="text-white/80 hover:text-white transition-colors">
-                About
-              </Link>
-              <Link to="/press" className="text-cyan-400 font-semibold">
-                Press
-              </Link>
-              <Button className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold">
-                Register
-              </Button>
-            </div>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main>
         {/* Hero Section */}
@@ -615,48 +593,7 @@ const Press = () => {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-white/10 bg-[#0B2A42] py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <img src="/cognivia-logo.png" alt="Cognivia" className="h-8 mb-4" />
-              <p className="text-white/60 text-sm">
-                Connecting 10,000+ Chief Digital & AI Officers globally
-              </p>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-4">Platform</h3>
-              <ul className="space-y-2 text-white/60 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">Summit</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Awards</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Podcasts</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Papers</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-white/60 text-sm">
-                <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
-                <li><Link to="/press" className="hover:text-white transition-colors">Press</Link></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-4">Legal</h3>
-              <ul className="space-y-2 text-white/60 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Cookies</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-white/10 pt-8 text-center text-white/60 text-sm">
-            <p>&copy; 2024 Cognivia. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
