@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Target, Trophy, Mic, Rocket } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import summitImage from "@/assets/summit-image.jpg";
 import podcastImage from "@/assets/podcast-image.jpg";
@@ -24,17 +25,29 @@ const Index = () => {
           <a href="/about" className="hover:text-primary transition-colors">About</a>
           <a href="/press" className="hover:text-primary transition-colors">Press</a>
           <span className="text-white/20">|</span>
-          <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5">
-            <a href="/summit">Summit</a>
+          <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
+            <a href="/summit" className="flex items-center gap-1.5">
+              <Target className="w-4 h-4" />
+              Summit
+            </a>
           </Button>
-          <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5">
-            <a href="/awards">Awards</a>
+          <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
+            <a href="/awards" className="flex items-center gap-1.5">
+              <Trophy className="w-4 h-4" />
+              Awards
+            </a>
           </Button>
-          <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5">
-            <a href="/podcasts">Podcasts</a>
+          <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
+            <a href="/podcasts" className="flex items-center gap-1.5">
+              <Mic className="w-4 h-4" />
+              Podcasts
+            </a>
           </Button>
-          <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5">
-            <a href="/startups">Startups</a>
+          <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
+            <a href="/startups" className="flex items-center gap-1.5">
+              <Rocket className="w-4 h-4" />
+              Startups
+            </a>
           </Button>
         </nav>
         <div className="flex space-x-2 md:space-x-3">
@@ -217,17 +230,29 @@ const Index = () => {
             <a href="/about" className="hover:text-primary transition-colors">About</a>
             <a href="/press" className="hover:text-primary transition-colors">Press</a>
             <span className="text-white/20">|</span>
-            <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5 h-8">
-              <a href="/summit">Summit</a>
+            <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
+              <a href="/summit" className="flex items-center gap-1.5">
+                <Target className="w-3.5 h-3.5" />
+                Summit
+              </a>
             </Button>
-            <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5 h-8">
-              <a href="/awards">Awards</a>
+            <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
+              <a href="/awards" className="flex items-center gap-1.5">
+                <Trophy className="w-3.5 h-3.5" />
+                Awards
+              </a>
             </Button>
-            <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5 h-8">
-              <a href="/podcasts">Podcasts</a>
+            <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
+              <a href="/podcasts" className="flex items-center gap-1.5">
+                <Mic className="w-3.5 h-3.5" />
+                Podcasts
+              </a>
             </Button>
-            <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-primary hover:bg-white/5 h-8">
-              <a href="/startups">Startups</a>
+            <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20 h-8">
+              <a href="/startups" className="flex items-center gap-1.5">
+                <Rocket className="w-3.5 h-3.5" />
+                Startups
+              </a>
             </Button>
           </nav>
           <p className="text-xs opacity-60 max-w-sm">
