@@ -1,11 +1,49 @@
 import { Button } from "@/components/ui/button";
-import { Target, Trophy, Mic, FileText, Rocket } from "lucide-react";
+import { Target, Trophy, Mic, FileText, Rocket, Shield } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { useEffect, useState } from "react";
+import { User } from "@supabase/supabase-js";
 
 const Header = () => {
   const location = useLocation();
+  const [user, setUser] = useState<User | null>(null);
+  const [isAdmin, setIsAdmin] = useState(false);
   
   const isActive = (path: string) => location.pathname === path;
+
+  useEffect(() => {
+    // Check initial session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user ?? null);
+      if (session?.user) {
+        checkAdminStatus(session.user.id);
+      }
+    });
+
+    // Listen for auth changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      setUser(session?.user ?? null);
+      if (session?.user) {
+        setTimeout(() => checkAdminStatus(session.user.id), 0);
+      } else {
+        setIsAdmin(false);
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const checkAdminStatus = async (userId: string) => {
+    const { data } = await supabase
+      .from("user_roles")
+      .select("role")
+      .eq("user_id", userId)
+      .eq("role", "admin")
+      .single();
+    
+    setIsAdmin(!!data);
+  };
   
   return (
     <header className="flex items-center justify-between px-4 md:px-8 py-6 border-b border-white/10 sticky top-0 bg-[hsl(205,67%,16%)]/90 backdrop-blur-md z-50">
@@ -39,6 +77,14 @@ const Header = () => {
         >
           Press
         </Link>
+        {isAdmin && (
+          <Link 
+            to="/admin" 
+            className={isActive("/admin") ? "text-primary" : "hover:text-primary transition-colors"}
+          >
+            Admin
+          </Link>
+        )}
         <span className="text-white/20">|</span>
         <Button variant="ghost" size="sm" asChild className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20">
           <a href="/summit" className="flex items-center gap-1.5">
@@ -78,6 +124,19 @@ const Header = () => {
         <Button variant="outline" className="hidden sm:inline-flex border-foreground text-foreground hover:bg-white/10">
           Join Newsletter
         </Button>
+        {user && !isActive("/auth") && !isActive("/admin") && (
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            asChild 
+            className="text-primary/80 hover:text-primary hover:bg-primary/10 border border-primary/20"
+          >
+            <Link to="/admin" className="flex items-center gap-1.5">
+              <Shield className="w-4 h-4" />
+              Dashboard
+            </Link>
+          </Button>
+        )}
       </div>
     </header>
   );

@@ -8,6 +8,8 @@ import About from "./pages/About";
 import Press from "./pages/Press";
 import JoinSponsorship from "./pages/JoinSponsorship";
 import Verify from "./pages/Verify";
+import Auth from "./pages/Auth";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/press" element={<Press />} />
           <Route path="/join" element={<JoinSponsorship />} />
           <Route path="/verify" element={<Verify />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
