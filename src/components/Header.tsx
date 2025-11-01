@@ -46,10 +46,10 @@ const Header = () => {
   };
   
   return (
-    <header className="flex items-center justify-between px-4 md:px-8 py-6 border-b border-white/10 sticky top-0 bg-[hsl(205,67%,16%)]/90 backdrop-blur-md z-50">
-      <div className="flex items-center space-x-3">
-        <Link to="/">
-          <img src="/cognivian-logo.png" alt="Cognivian Logo" className="h-10 w-auto" />
+    <header className="flex items-center justify-between px-4 md:px-8 py-4 border-b border-white/10 sticky top-0 bg-[hsl(205,67%,16%)]/95 backdrop-blur-md z-50">
+      <div className="flex items-center">
+        <Link to="/" className="flex items-center">
+          <img src="/cognivian-logo.png" alt="Cognivian Logo" className="h-8 md:h-9 w-auto" />
         </Link>
       </div>
       <nav className="hidden md:flex items-center gap-4 lg:gap-6 text-sm font-semibold tracking-wide">

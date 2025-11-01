@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="py-10 px-4 md:px-8 border-t border-white/10 bg-[hsl(205,67%,16%)]">
-      <div className="flex flex-col items-start max-w-6xl mx-auto gap-6">
-        <div className="flex items-center space-x-3">
-          <Link to="/">
-            <img src="/cognivian-logo.png" alt="Cognivian Logo" className="h-8 w-auto" />
+    <footer className="py-8 md:py-10 px-4 md:px-8 border-t border-white/10 bg-[hsl(205,67%,16%)]">
+      <div className="flex flex-col items-start max-w-7xl mx-auto gap-5 md:gap-6">
+        <div className="flex items-center">
+          <Link to="/" className="flex items-center">
+            <img src="/cognivian-logo.png" alt="Cognivian Logo" className="h-7 md:h-8 w-auto" />
           </Link>
         </div>
         <nav className="flex flex-wrap items-center gap-3 md:gap-4 text-sm">
